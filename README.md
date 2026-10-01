@@ -52,3 +52,24 @@ src/
 │   └── stackPractice.ts
 ├── index.ts                    # Entry-point demo runner
 └── tsconfig.json
+🎯 Practice Modules & ExercisesClick to expand each module to inspect included drills:[x] Reverse Words in a String — Pointer iteration without extra token memory[x] Defang an IP Address — String substitution and sanitization routines[x] Truncate Sentence — Word boundary slicing and prefix handling[x] Valid Anagram — Character frequency sorting vs. map counters[x] Simplify Unix Path — Canonical path resolution via stack logic[x] Running Sum of 1D Array — In-place prefix sum accumulators[x] Filter Active Usernames — High-order predicates and truthy checks[x] Frequency Counter — Accumulating metrics using single-pass reduce[x] Cart Total with Discount Logic — Object streaming and financial rounding[x] Group Items by Category — Dynamic bucket aggregation via Object.groupBy[x] Two Sum — Complement search in $O(n)$ time using Hash Maps[x] Contains Duplicate — $O(1)$ set lookup comparisons[x] Intersection of Two Arrays — Unique element filtering across multiple sets[x] First Non-Repeating Character — Frequency map coupled with chronological scanning[x] Group Anagrams — Key hashing and bucket generation⚡ Getting StartedPrerequisitesEnsure you have Node.js (v18+) and npm installed.Bash# Clone the repository
+git clone [https://github.com/your-username/qa-sdet-ts-lab.git](https://github.com/your-username/qa-sdet-ts-lab.git)
+
+# Navigate into the lab root
+cd qa-sdet-ts-lab
+
+# Install dependencies
+npm install
+Running DrillsRun any individual drill file directly with tsx (no compile step needed):Bash# Execute a single string drill
+npx tsx src/01_string-basics/splitAndJoins.ts
+
+# Execute a Map/Set drill
+npx tsx src/03_Map&Set/MapAndSet.ts
+Run global tasks:Bash# Run the entry file
+npm run start
+
+# Strict TypeScript type validation
+npm run typecheck
+🗺️ Learning RoadmapTrack your progress across the complete SDET technical interview curriculum:[Phase 1: Foundations] ──► [Phase 2: Core Patterns] ──► [Phase 3: Systems & Data]
+       (Complete)                 (In Progress)                 (Planned)
+[x] Phase 1: Foundations[x] String manipulation & regex patterns[x] Declarative array pipelines (map, filter, reduce)[x] Hash Maps & Hash Sets fundamentals[ ] Phase 2: Core Algorithmic Patterns[ ] Two-pointer navigation[ ] Sliding window arrays and substring optimization[ ] Monotonic stacks & recursion queues[ ] 60-minute timed mock coding drills[ ] Phase 3: Real-World SDET Scenarios[ ] Asynchronous event loop & race conditions handling[ ] Dynamic JSON schema diffing and payload assertions[ ] Relational SQL aggregation & data reasoning[ ] Live verbal problem-solving & narration walkthroughsBuilt for technical rigor, analytical reasoning, and software reliability.Crafted for continuous learning and engineering growth.What Makes This Layout WorkClear Information Density: Collapsible <details> sections keep the list of 15+ coding problems neatly organized so visitors can expand only what they want to review.Visual Progress Badges & Checklists: Moving from plain text bullets to GitHub markdown checkboxes ([x] / [ ]) gives an immediate sense of forward momentum.Structured Mental Model: The table linking data structures directly to real-world QA/SDET tasks immediately clarifies why this repository exists and how it applies to practical automation engineering.
