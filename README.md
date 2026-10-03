@@ -147,6 +147,28 @@ npm run start
 npm run typecheck
 ```
 
+### LeetCode-style progress
+
+This repo currently contains 20 interview-style coding problems across the main learning modules, with 19 solved and 1 still pending.
+
+| Module | Problems | Solved |
+| --- | ---: | ---: |
+| String Basics | 5 | 5 |
+| Array Transformation | 5 | 5 |
+| Map & Set | 5 | 4 |
+| Sort with Comparator | 5 | 5 |
+| Total | 20 | 19 |
+
+```mermaid
+pie title LeetCode-style problems solved by module
+    "String Basics" : 5
+    "Array Transformation" : 5
+    "Map & Set" : 4
+    "Sort with Comparator" : 5
+```
+
+> Current open item: Group Anagrams in the Map & Set section.
+
 ---
 
 ## 🗺️ Learning Roadmap
