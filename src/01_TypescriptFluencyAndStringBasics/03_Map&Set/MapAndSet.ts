@@ -120,23 +120,23 @@ export function firstUniqChar(input: string): number {
   let wordCountMap = new Map<string, number>()
   for (let i = 0; i < input.length; i++) {
     let currentCharacter = input[i]
-    let currentCharacterCount = wordCountMap.get(currentCharacter)||0
-    wordCountMap.set(currentCharacter,currentCharacterCount+1)
+    let currentCharacterCount = wordCountMap.get(currentCharacter) || 0
+    wordCountMap.set(currentCharacter, currentCharacterCount + 1)
   }
-  console.log("Words Counted",wordCountMap)
+  console.log("Words Counted", wordCountMap)
 
-  for(let i=0;i<=input.length;i++){
-    const char=input[i]
-    if(wordCountMap.get(char)===1){
-      
-      console.log("first unique char",char)
+  for (let i = 0; i <= input.length; i++) {
+    const char = input[i]
+    if (wordCountMap.get(char) === 1) {
+
+      console.log("first unique char", char)
       return i
     }
   }
   return -1;
 }
 
-console.log(firstUniqChar("sumeetshah"))
+//console.log(firstUniqChar("sumeetshah"))
 
 /**
  * Q5: Group Anagrams (LeetCode 49)
@@ -149,7 +149,24 @@ console.log(firstUniqChar("sumeetshah"))
  *   Input:  strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
  *   Output: [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]
  */
-export function groupAnagrams(strs: string[]): string[][] {
+export function groupAnagrams(inputString: string[]): string[][] {
   // Hint: Use a Map where key is the sorted word (str.split('').sort().join(''))
-  return [];
+
+  let myMap=new Map<string,string[]>()
+
+  for (let i = 0; i < inputString.length; i++) {
+    const currentWord = inputString[i]
+    const sortedCurrentWord = currentWord.split("").sort().join("")
+    // 2. If we haven't seen this signature, initialize an empty array
+    if(!myMap.get(sortedCurrentWord)){
+      myMap.set(sortedCurrentWord,[])
+    }
+    myMap.get(sortedCurrentWord)!.push(currentWord)// array so push
+  }
+  console.log(myMap)
+  console.log(Array.from(myMap.values()))
+  return Array.from(myMap.values());
 }
+
+const strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+groupAnagrams(strs)
