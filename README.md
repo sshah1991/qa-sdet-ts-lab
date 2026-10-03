@@ -2,36 +2,136 @@
 
 # 🧪 QA SDET TypeScript Learning Lab
 
-> Elevating QA engineers and SDETs from script-runners to systems-thinkers through core logic, patterns, and type-safe problem solving.
+> Bridging QA logic, automation thinking, and robust TypeScript fundamentals for real-world SDET growth.
 
 <br/>
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Target](https://img.shields.io/badge/Focus-QA%20%2F%20SDET-0A84FF?style=for-the-badge&logo=target&logoColor=white)](#)
+[![Node](https://img.shields.io/badge/Runtime-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![QA/SDET](https://img.shields.io/badge/Focus-QA%20%2F%20SDET-0A84FF?style=for-the-badge)](#)
 [![Status](https://img.shields.io/badge/Phase-Active%20Drills-8A2BE2?style=for-the-badge)](#)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](#)
 
 <br/>
 
-[Core Pillars](#-the-core-thesis) • [Project Structure](#-project-structure) • [Practice Modules](#-practice-modules--drills) • [Execution Guide](#-getting-started) • [Roadmap](#-learning-roadmap)
+[Overview](#-overview) • [Curriculum](#-curriculum) • [Quick Start](#-quick-start) • [Progress](#-progress-tracker)
 
 </div>
 
 ---
 
-## 💡 The Core Thesis
+## 🔎 Overview
 
-> **Quality Engineering is not just about asserting expected output.**  
-> It is about deconstructing runtime behavior, predicting failure modes, and writing maintainable, type-safe logic.
+This repository is a practical TypeScript learning lab designed for aspiring QA engineers and SDETs who want to grow beyond test execution into real software and automation reasoning.
 
-Modern automation frameworks and quality pipelines demand real software engineering discipline. This lab bridges the gap between basic test scripting and resilient SDET architecture:
+The focus is not only on solving algorithmic puzzles, but on building strong engineering habits: handling edge cases, validating behavior, reasoning about data flow, and writing maintainable logic that mirrors real automation and quality engineering work.
 
-| 🧩 Pillar | ⚙️ SDET Application | 🎯 Target Outcome |
+> **Why these drills exist:** These exercises are intentionally shaped around real SDET concerns such as async polling, retry backoff logic, strict API typing, dynamic locator strategies, resilient data handling, and structured debugging—not generic textbook LeetCode alone.
+
+---
+
+## 🧠 Core Pillars
+
+| Pillar | SDET Value | Example Focus |
 | :--- | :--- | :--- |
-| **Data Structures** | `Map`, `Set`, Queues, Stacks | Fast in-memory state tracking, payload validation, and caching |
-| **Algorithmic Logic** | Two Pointers, Sliding Window | High-throughput log evaluation, stream parsing, and sequence checks |
-| **Type Safety** | Generics, Narrowing, Strict Interfaces | Self-documenting API schemas and bulletproof test harnesses |
-| **Edge-Case Mindset** | Falsy boundaries, off-by-one errors | Catching regressions before code reaches release candidates |
+| **Data Structures** | Better state tracking and payload handling | `Map`, `Set`, sorting, grouping |
+| **Type Safety** | Stronger validation logic | strict TypeScript types and boundaries |
+| **Algorithmic Reasoning** | Better bug isolation and debugging | patterns, frequency analysis, traversal |
+| **Edge-Case Thinking** | fewer flaky tests and better coverage | off-by-one, empty input, duplicate values |
+| **Automation Mindset** | stronger engineering judgment | dynamic selectors, resilient flows, retries |
+
+---
+
+## 📚 Curriculum
+
+### Current module coverage
+
+<details>
+<summary><b>1. String Fundamentals & Sanitization</b> — 5/5 complete</summary>
+
+- [x] **Reverse Words in a String** — tokenization and word reordering logic
+- [x] **Defang an IP Address** — safe string replacement and sanitization
+- [x] **Truncate Sentence** — boundary-aware slicing and whitespace control
+- [x] **Valid Anagram** — frequency comparison using string transforms
+- [x] **Simplify Unix Path** — stack-style path normalization
+
+</details>
+
+<details>
+<summary><b>2. Declarative Array Transformations</b> — 5/5 complete</summary>
+
+- [x] **Running Sum of 1D Array** — prefix accumulation patterns
+- [x] **Filter Active Usernames** — predicate-based filtering and output shaping
+- [x] **Frequency Counter** — single-pass aggregation with `reduce()`
+- [x] **Cart Total with Discount Logic** — business rules applied to stream data
+- [x] **Group Items by Category** — dynamic bucket creation and grouping
+
+</details>
+
+<details open>
+<summary><b>3. Map & Set Optimization</b> — 4/5 complete</summary>
+
+- [x] **Two Sum** — complement lookup in linear time using hash maps
+- [x] **Contains Duplicate** — unique-check behavior with `Set`
+- [x] **Intersection of Two Arrays** — multi-collection matching and set membership
+- [x] **First Non-Repeating Character** — frequency map + first-match scanning
+- [ ] **Group Anagrams** — map keying by canonical sorted strings
+
+</details>
+
+<details>
+<summary><b>4. Sort with Comparator</b> — 5/5 complete</summary>
+
+- [x] **Sort Colors** — three-way partitioning and stable ordering ideas
+- [x] **Largest Number** — comparator-driven custom number ordering
+- [x] **Sort Characters by Frequency** — map-based frequency sorting
+- [x] **Custom Multi-Level Object Sorting** — department, salary, and name ordering
+- [x] **Relative Sort Array** — ordering by custom priority list with leftovers appended
+
+</details>
+
+---
+
+## ⚡ Quick Start
+
+```bash
+# 1) Enter the project workspace
+cd "/Users/apple/Desktop/Coding Practice TS"
+
+# 2) Install project dependencies
+cd ts-practice && npm install
+
+# 3) Run the main entry point
+npm run start
+
+# 4) Run strict TypeScript checks
+npm run typecheck
+
+# 5) Run a specific drill file
+npx tsx ../src/01_TypescriptFluencyAndStringBasics/01_string-basics/splitAndJoins.ts
+npx tsx ../src/01_TypescriptFluencyAndStringBasics/02_array-transformation/map-filter-reduce.ts
+npx tsx ../src/01_TypescriptFluencyAndStringBasics/03_Map&Set/MapAndSet.ts
+npx tsx ../src/01_TypescriptFluencyAndStringBasics/04_SortWithComparotor/SortWithComparator.ts
+
+# 6) Watch mode for live re-runs during development
+npm run dev
+```
+
+> Use the `npx tsx` commands when you want to target one drill without executing the full app entrypoint.
+
+---
+
+## 📊 Progress Tracker
+
+| Module | Total | Done | Status | Progress |
+| :--- | ---: | ---: | :--- | :--- |
+| String Basics | 5 | 5 | ✅ Complete | `██████████ 100%` |
+| Array Transformation | 5 | 5 | ✅ Complete | `██████████ 100%` |
+| Map & Set | 5 | 4 | 🔄 In Progress | `█████████░ 80%` |
+| Sort with Comparator | 5 | 5 | ✅ Complete | `██████████ 100%` |
+| Overall | 20 | 19 | 🔄 Active | `█████████░ 95%` |
+
+**Current open item:** `Group Anagrams` in the Map & Set module.
 
 ---
 
@@ -48,179 +148,31 @@ src/
 │   │   └── MapAndSet.ts
 │   ├── 04_SortWithComparotor/
 │   │   └── SortWithComparator.ts
-│   └── README.md
-├── Practice/
-│   ├── mapPractice.ts
-│   ├── map-filter-reducePractice.ts
-│   ├── setPractice.ts
-│   └── stackPractice.ts
+│   └── Practice/
+│       ├── mapPractice.ts
+│       ├── map-filter-reducePractice.ts
+│       ├── setPractice.ts
+│       └── stackPractice.ts
 ├── index.ts
 └── README.md
 ```
 
-### Module Breakdown
+---
 
-- `01_TypescriptFluencyAndStringBasics/01_string-basics` &rarr; String parsing, tokenization, sanitization, and boundary conditions.
-- `01_TypescriptFluencyAndStringBasics/02_array-transformation` &rarr; Declarative data pipelines using `map()`, `filter()`, and `reduce()`.
-- `01_TypescriptFluencyAndStringBasics/03_Map&Set` &rarr; Hash-based indexing, frequency mapping, and unique value tracking.
-- `01_TypescriptFluencyAndStringBasics/04_SortWithComparotor` &rarr; Sorting with custom comparator logic and relative ordering problems.
-- `Practice/` &rarr; Mini-drills, experimental coding, and scratchpad exercises.
+## 🌱 Roadmap
+
+- [x] Foundations: strings, arrays, object modeling, and TypeScript basics
+- [x] Core data structures: `Map`, `Set`, ordering, grouping, and frequency logic
+- [ ] Core patterns: two pointers, sliding window, monotonic stacks
+- [ ] SDET-style practice: async polling, retries, dynamic locators, resilient selectors
+- [ ] SQL reasoning and data validation scenarios
+- [ ] System design and engineering theory notes
+- [ ] Story-driven learning and live coding walkthroughs
 
 ---
 
-## 🎯 Practice Modules & Drills
+## 🏁 Closing Note
 
-Click each section to inspect problem sets:
+This repository represents a practical engineering path for QA and SDET growth: from writing small TypeScript snippets to reasoning about system behavior, automation reliability, edge cases, and core logic under pressure.
 
-<details open>
-<summary><b>1. String Fundamentals & Sanitization</b> (5/5 Complete)</summary>
-<br/>
-
-- [x] **Reverse Words in a String** — Word-level boundary preservation and token iteration
-- [x] **Defang an IP Address** — Safe string substitution and sanitization routines
-- [x] **Truncate Sentence** — Prefix boundary slicing without trailing whitespace
-- [x] **Valid Anagram** — Frequency mapping comparison vs. alphabetical sorting
-- [x] **Simplify Unix Path** — Canonical folder resolution using stack-like transitions
-
-</details>
-
-<details open>
-<summary><b>2. Declarative Array Transformations</b> (5/5 Complete)</summary>
-<br/>
-
-- [x] **Running Sum of 1D Array** — Prefix accumulation patterns
-- [x] **Filter Active Usernames** — Predicate-based data filtering and truthy assertions
-- [x] **Frequency Counter** — Streaming single-pass key/value aggregation via `reduce()`
-- [x] **Cart Total with Discount Logic** — Object streaming, floating-point rounding, and business rules
-- [x] **Group Items by Category** — Dynamic bucket aggregation and structural transforms
-
-</details>
-
-<details open>
-<summary><b>3. Map & Set Optimization</b> (4/5 Complete)</summary>
-<br/>
-
-- [x] **Two Sum** — Complement lookups in $\mathcal{O}(n)$ time using Hash Maps
-- [x] **Contains Duplicate** — $\mathcal{O}(1)$ uniqueness validation with Sets
-- [x] **Intersection of Two Arrays** — Multi-collection filtering and set membership checks
-- [x] **First Non-Repeating Character** — Frequency map coupled with chronological scanning
-- [ ] **Group Anagrams** — Deterministic key hashing and bucket mapping
-
-</details>
-
-<details open>
-<summary><b>4. Sort with Comparator</b> (5/5 Complete)</summary>
-<br/>
-
-- [x] **Sort Colors** — Three-way partition logic for counting-based sorting
-- [x] **Largest Number** — Comparator-driven concatenation ordering
-- [x] **Sort Characters by Frequency** — Count map plus frequency-based ordering
-- [x] **Custom Multi-Level Object Sorting** — Department / salary / name ranking rules
-- [x] **Relative Sort Array** — Order by pattern array while leaving leftovers sorted
-
-</details>
-
----
-
-## ⚡ Getting Started
-
-### Prerequisites
-
-Ensure you have [Node.js](https://nodejs.org/) (v18+) and [npm](https://www.npmjs.com/) installed.
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/qa-sdet-ts-lab.git
-
-# Navigate into the lab root
-cd qa-sdet-ts-lab
-
-# Install dependencies
-npm install
-```
-
-### Running Practice Files
-
-Run any drill directly using `tsx` (TypeScript Execute) without a manual build step:
-
-```bash
-# Run a specific String drill
-npx tsx src/01_TypescriptFluencyAndStringBasics/01_string-basics/splitAndJoins.ts
-
-# Run an Array Transformation drill
-npx tsx src/01_TypescriptFluencyAndStringBasics/02_array-transformation/map-filter-reduce.ts
-
-# Run a Map & Set drill
-npx tsx src/01_TypescriptFluencyAndStringBasics/03_Map&Set/MapAndSet.ts
-
-# Run a Sort with Comparator drill
-npx tsx src/01_TypescriptFluencyAndStringBasics/04_SortWithComparotor/SortWithComparator.ts
-```
-
-### Project-Wide Commands
-
-```bash
-# Run the main entry point
-npm run start
-
-# Run strict TypeScript type verification
-npm run typecheck
-```
-
-### LeetCode-style progress
-
-This repo currently contains 20 interview-style coding problems across the main learning modules, with 19 solved and 1 still pending.
-
-| Module | Problems | Solved |
-| --- | ---: | ---: |
-| String Basics | 5 | 5 |
-| Array Transformation | 5 | 5 |
-| Map & Set | 5 | 4 |
-| Sort with Comparator | 5 | 5 |
-| Total | 20 | 19 |
-
-```mermaid
-%%{init: {'themeVariables': {'pie1': '#4C78A8', 'pie2': '#F58518', 'pie3': '#54A24B', 'pie4': '#E45756', 'pieTitleTextSize': '20px'}}}%%
-pie title LeetCode-style problems solved by module
-    "String Basics" : 5
-    "Array Transformation" : 5
-    "Map & Set" : 4
-    "Sort with Comparator" : 5
-```
-
-> Current open item: Group Anagrams in the Map & Set section.
-
----
-
-## 🗺️ Learning Roadmap
-
-Track your progress across the complete SDET technical curriculum:
-
-```
-[Phase 1: Foundations] ──► [Phase 2: Core Patterns] ──► [Phase 3: Systems & Data]
-       (Complete)                 (In Progress)                 (Planned)
-```
-
-- [x] **Phase 1: Foundations**
-  - [x] String manipulation & regex fundamentals
-  - [x] Declarative transformations (`map`, `filter`, `reduce`)
-  - [x] Key-value pairs (`Map`) and unique sets (`Set`)
-- [ ] **Phase 2: Core Algorithmic Patterns**
-  - [ ] Two-pointer navigation
-  - [ ] Sliding window arrays and substring optimization
-  - [ ] Monotonic stacks & recursion queues
-  - [ ] 60-minute timed mock coding drills
-- [ ] **Phase 3: Real-World SDET Scenarios**
-  - [ ] Asynchronous event loop & race conditions handling
-  - [ ] Dynamic JSON schema diffing and payload assertions
-  - [ ] Relational SQL aggregation & data reasoning
-  - [ ] Live verbal problem-solving & narration walkthroughs
-
----
-
-<div align="center">
-
-**Built for technical rigor, analytical reasoning, and software reliability.**  
-*Crafted for continuous learning and engineering growth.*
-
-</div>
+It is designed to build the technical confidence needed for automation engineering, quality strategy, and modern software testing roles.
