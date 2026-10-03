@@ -121,7 +121,7 @@ export function frequencySort(s: string): string {
     return finalString;
 }
 let s = "tree"
-frequencySort(s)
+//frequencySort(s)
 
 
 /**
@@ -151,8 +151,40 @@ export interface Employee {
 
 export function sortEmployees(employees: Employee[]): Employee[] {
     // Hint: Chain comparator conditions using the `||` operator
-    return [];
+
+    //create a copy of the employee
+    const empCopy = Array.from(employees)
+    const sortedEmployee = empCopy.sort((a, b) => {
+
+        //sorting condition
+        const deptComparison = a.dept.localeCompare(b.dept)
+        const salaryCompare = b.salary - a.salary
+        const nameCompare = a.name.localeCompare(b.name)
+        //decide which sorting condition to pass
+        if (deptComparison !== 0) {
+            return deptComparison
+        }
+        if (salaryCompare !== 0) {
+            return salaryCompare
+        } else (nameCompare !== 0)
+        return nameCompare
+    })
+
+    //console.log(sortedEmployee)
+
+    // 3. Print from the stored variable
+    sortedEmployee.forEach(({ name, dept, salary }) => {
+        console.log(`${name} (${dept}, ${salary})`);
+    });
+    return sortedEmployee;
 }
+const input1: Employee[] = [
+    { name: "Bob", dept: "Eng", salary: 100 },
+    { name: "Alice", dept: "Eng", salary: 120 },
+    { name: "David", dept: "HR", salary: 90 },
+    { name: "Carol", dept: "Eng", salary: 100 }
+];
+//sortEmployees(input1)
 
 /**
  * Q5: Relative Sort Array (LeetCode 1122)
@@ -167,7 +199,41 @@ export function sortEmployees(employees: Employee[]): Employee[] {
  *   Input:  arr1 = [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19], arr2 = [2, 1, 4, 3, 9, 6]
  *   Output: [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
  */
-export function relativeSortArray(arr1: number[], arr2: number[]): number[] {
-    // Hint: Map each element from arr2 to its index, then compare ranks
-    return [];
+xport function relativeSortArray(arr1: number[], arr2: number[]): number[] {
+    const frequencyMap = new Map<number, number>();
+    const leftovers: number[] = [];
+    const result: number[] = [];
+
+    // 1. Store arr2 in a Set for O(1) membership checks
+    const arr2Set = new Set(arr2);
+
+    // 2. Count frequencies of arr2 elements, collect leftovers
+    for (const num of arr1) {
+        if (arr2Set.has(num)) {
+            const count = frequencyMap.get(num) || 0;
+            frequencyMap.set(num, count + 1);
+        } else {
+            leftovers.push(num);
+        }
+    }
+
+    // 3. Reconstruct matched numbers strictly in the relative order of arr2
+    for (const num of arr2) {
+        const count = frequencyMap.get(num) || 0;
+        for (let j = 0; j < count; j++) {
+            result.push(num);
+        }
+    }
+
+    // 4. Sort leftovers in ascending order
+    leftovers.sort((a, b) => a - b);
+
+    // 5. Combine and return
+    return result.concat(leftovers);
 }
+
+// Verification
+const arr1 = [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19];
+const arr2 = [2, 1, 4, 3, 9, 6];
+console.log(relativeSortArray(arr1, arr2));
+// Output: [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
