@@ -39,27 +39,32 @@ Modern automation frameworks and quality pipelines demand real software engineer
 
 ```bash
 src/
-├── 01_string-basics/           # String manipulation, regex & sanitization drills
-│   └── splitAndJoins.ts
-├── 02_array-transformation/    # map, filter, reduce & declarative data pipelines
-│   └── map-filter-reduce.ts
-├── 03_Map&Set/                 # Fast lookups, unique bounds & hash tables
-│   └── MapAndSet.ts
-├── Practice/                   # Unstructured mini-drills & experimental logic
+├── 01_TypescriptFluencyAndStringBasics/
+│   ├── 01_string-basics/
+│   │   └── splitAndJoins.ts
+│   ├── 02_array-transformation/
+│   │   └── map-filter-reduce.ts
+│   ├── 03_Map&Set/
+│   │   └── MapAndSet.ts
+│   ├── 04_SortWithComparotor/
+│   │   └── SortWithComparator.ts
+│   └── README.md
+├── Practice/
 │   ├── mapPractice.ts
 │   ├── map-filter-reducePractice.ts
 │   ├── setPractice.ts
 │   └── stackPractice.ts
-├── index.ts                    # Entry-point runner
+├── index.ts
 └── README.md
 ```
 
 ### Module Breakdown
 
-- `01_string-basics` &rarr; String parsing, tokenization, regex, and boundary conditions.
-- `02_array-transformation` &rarr; Declarative data pipelines using `map()`, `filter()`, and `reduce()`.
-- `03_Map&Set` &rarr; Hash-based indexing, frequency mapping, and unique value tracking.
-- `Practice/` &rarr; Mini-drills, whiteboard-style experiments, and scratchpads.
+- `01_TypescriptFluencyAndStringBasics/01_string-basics` &rarr; String parsing, tokenization, sanitization, and boundary conditions.
+- `01_TypescriptFluencyAndStringBasics/02_array-transformation` &rarr; Declarative data pipelines using `map()`, `filter()`, and `reduce()`.
+- `01_TypescriptFluencyAndStringBasics/03_Map&Set` &rarr; Hash-based indexing, frequency mapping, and unique value tracking.
+- `01_TypescriptFluencyAndStringBasics/04_SortWithComparotor` &rarr; Sorting with custom comparator logic and relative ordering problems.
+- `Practice/` &rarr; Mini-drills, experimental coding, and scratchpad exercises.
 
 ---
 
@@ -92,14 +97,26 @@ Click each section to inspect problem sets:
 </details>
 
 <details open>
-<summary><b>3. Map & Set Optimization</b> (5/5 Complete)</summary>
+<summary><b>3. Map & Set Optimization</b> (4/5 Complete)</summary>
 <br/>
 
 - [x] **Two Sum** — Complement lookups in $\mathcal{O}(n)$ time using Hash Maps
 - [x] **Contains Duplicate** — $\mathcal{O}(1)$ uniqueness validation with Sets
 - [x] **Intersection of Two Arrays** — Multi-collection filtering and set membership checks
 - [x] **First Non-Repeating Character** — Frequency map coupled with chronological scanning
-- [x] **Group Anagrams** — Deterministic key hashing and bucket mapping
+- [ ] **Group Anagrams** — Deterministic key hashing and bucket mapping
+
+</details>
+
+<details open>
+<summary><b>4. Sort with Comparator</b> (5/5 Complete)</summary>
+<br/>
+
+- [x] **Sort Colors** — Three-way partition logic for counting-based sorting
+- [x] **Largest Number** — Comparator-driven concatenation ordering
+- [x] **Sort Characters by Frequency** — Count map plus frequency-based ordering
+- [x] **Custom Multi-Level Object Sorting** — Department / salary / name ranking rules
+- [x] **Relative Sort Array** — Order by pattern array while leaving leftovers sorted
 
 </details>
 
@@ -128,13 +145,16 @@ Run any drill directly using `tsx` (TypeScript Execute) without a manual build s
 
 ```bash
 # Run a specific String drill
-npx tsx src/01_string-basics/splitAndJoins.ts
+npx tsx src/01_TypescriptFluencyAndStringBasics/01_string-basics/splitAndJoins.ts
 
 # Run an Array Transformation drill
-npx tsx src/02_array-transformation/map-filter-reduce.ts
+npx tsx src/01_TypescriptFluencyAndStringBasics/02_array-transformation/map-filter-reduce.ts
 
 # Run a Map & Set drill
-npx tsx src/03_Map&Set/MapAndSet.ts
+npx tsx src/01_TypescriptFluencyAndStringBasics/03_Map&Set/MapAndSet.ts
+
+# Run a Sort with Comparator drill
+npx tsx src/01_TypescriptFluencyAndStringBasics/04_SortWithComparotor/SortWithComparator.ts
 ```
 
 ### Project-Wide Commands
@@ -160,6 +180,7 @@ This repo currently contains 20 interview-style coding problems across the main 
 | Total | 20 | 19 |
 
 ```mermaid
+%%{init: {'themeVariables': {'pie1': '#4C78A8', 'pie2': '#F58518', 'pie3': '#54A24B', 'pie4': '#E45756', 'pieTitleTextSize': '20px'}}}%%
 pie title LeetCode-style problems solved by module
     "String Basics" : 5
     "Array Transformation" : 5
