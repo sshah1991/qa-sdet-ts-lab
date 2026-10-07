@@ -199,7 +199,7 @@ const input1: Employee[] = [
  *   Input:  arr1 = [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19], arr2 = [2, 1, 4, 3, 9, 6]
  *   Output: [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
  */
-xport function relativeSortArray(arr1: number[], arr2: number[]): number[] {
+export function relativeSortArray(arr1: number[], arr2: number[]): number[] {
     const frequencyMap = new Map<number, number>();
     const leftovers: number[] = [];
     const result: number[] = [];
